@@ -35,7 +35,7 @@ form.addEventListener('submit', (e) => {
   const name = nameInput.value;
   const score = scoreInput.value;
   if (name.trim() !== '' && score.trim() !== '') {
-  addScore(name, score);
+    addScore(name, score);
   }
   nameInput.value = '';
   scoreInput.value = '';
