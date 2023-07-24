@@ -48,6 +48,7 @@ submitBtn.addEventListener('click', async (event) => {
   const { value: name } = nameInput;
   const { value: score } = scoreInput;
   await saveScore(gameId, name, score);
+
   nameInput.value = '';
   scoreInput.value = '';
 });
