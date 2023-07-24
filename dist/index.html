@@ -1,31 +1,69 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leaderboard</title>
-<script defer src="main.6a477e4a456cb0f3aae5.js"></script></head>
-<body>
-    <h1>Leaderboard</h1>
-    <div class="container">
-        <div class="col1">
-            <div class="row1">
-                <h2>Recent scores</h2>
-                <button type="submit" id="refresh">Refresh</button>
-            </div>
-            <ul id="score-list" class="border"></ul>
-        </div>
-        <div class="col2">
-            <form>
-                <h2>Add your score</h2>
-                <label></label>
-                <input type="text" id="name" placeholder="Your name">
-                <label></label>
-                <input type="text" id="score" placeholder="Your score">
-                <button type="submit" id="submit">Submit</button>
-            </form>
-        </div>
-    </div>
-</body>
-</html>
+<head><script defer src="main.aa7f9ce8a0ff61b95fd8.js"></script></head>Html Webpack Plugin:
+<pre>
+  Error: Child compilation failed:
+  Module not found: Error: Can't resolve 'C:\Microverse\module-2\Leaderboard-project\src\index.h  tml' in 'C:\Microverse\module-2\Leaderboard-project'
+  ModuleNotFoundError: Module not found: Error: Can't resolve 'C:\Microverse\module-2\Leaderboar  d-project\src\index.html' in 'C:\Microverse\module-2\Leaderboard-project'
+      at C:\Microverse\module-2\Leaderboard-project\node_modules\webpack\lib\Compilation.js:2016  :28
+      at C:\Microverse\module-2\Leaderboard-project\node_modules\webpack\lib\NormalModuleFactory  .js:817:13
+      at eval (eval at create (C:\Microverse\module-2\Leaderboard-project\node_modules\tapable\l  ib\HookCodeFactory.js:33:10), <anonymous>:10:1)
+      at C:\Microverse\module-2\Leaderboard-project\node_modules\webpack\lib\NormalModuleFactory  .js:275:22
+      at eval (eval at create (C:\Microverse\module-2\Leaderboard-project\node_modules\tapable\l  ib\HookCodeFactory.js:33:10), <anonymous>:9:1)
+      at C:\Microverse\module-2\Leaderboard-project\node_modules\webpack\lib\NormalModuleFactory  .js:448:22
+      at C:\Microverse\module-2\Leaderboard-project\node_modules\webpack\lib\NormalModuleFactory  .js:118:11
+      at C:\Microverse\module-2\Leaderboard-project\node_modules\webpack\lib\NormalModuleFactory  .js:689:25
+      at C:\Microverse\module-2\Leaderboard-project\node_modules\webpack\lib\NormalModuleFactory  .js:893:8
+      at C:\Microverse\module-2\Leaderboard-project\node_modules\webpack\lib\NormalModuleFactory  .js:1013:5
+  
+  - Compilation.js:2016 
+    [Leaderboard-project]/[webpack]/lib/Compilation.js:2016:28
+  
+  - NormalModuleFactory.js:817 
+    [Leaderboard-project]/[webpack]/lib/NormalModuleFactory.js:817:13
+  
+  
+  - NormalModuleFactory.js:275 
+    [Leaderboard-project]/[webpack]/lib/NormalModuleFactory.js:275:22
+  
+  
+  - NormalModuleFactory.js:448 
+    [Leaderboard-project]/[webpack]/lib/NormalModuleFactory.js:448:22
+  
+  - NormalModuleFactory.js:118 
+    [Leaderboard-project]/[webpack]/lib/NormalModuleFactory.js:118:11
+  
+  - NormalModuleFactory.js:689 
+    [Leaderboard-project]/[webpack]/lib/NormalModuleFactory.js:689:25
+  
+  - NormalModuleFactory.js:893 
+    [Leaderboard-project]/[webpack]/lib/NormalModuleFactory.js:893:8
+  
+  - NormalModuleFactory.js:1013 
+    [Leaderboard-project]/[webpack]/lib/NormalModuleFactory.js:1013:5
+  
+  - child-compiler.js:169 
+    [Leaderboard-project]/[html-webpack-plugin]/lib/child-compiler.js:169:18
+  
+  - Compiler.js:551 finalCallback
+    [Leaderboard-project]/[webpack]/lib/Compiler.js:551:5
+  
+  - Compiler.js:577 
+    [Leaderboard-project]/[webpack]/lib/Compiler.js:577:11
+  
+  - Compiler.js:1199 
+    [Leaderboard-project]/[webpack]/lib/Compiler.js:1199:17
+  
+  
+  - Hook.js:18 Hook.CALL_ASYNC_DELEGATE [as _callAsync]
+    [Leaderboard-project]/[tapable]/lib/Hook.js:18:14
+  
+  - Compiler.js:1195 
+    [Leaderboard-project]/[webpack]/lib/Compiler.js:1195:33
+  
+  - Compilation.js:2789 finalCallback
+    [Leaderboard-project]/[webpack]/lib/Compilation.js:2789:11
+  
+  - Compilation.js:3094 
+    [Leaderboard-project]/[webpack]/lib/Compilation.js:3094:11
+  
+  
+</pre>
