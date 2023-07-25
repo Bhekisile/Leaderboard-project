@@ -18,4 +18,6 @@ const saveScore = async (gameId, name, score) => {
     return null;
   }
 };
+saveScore();
+
 export default saveScore;

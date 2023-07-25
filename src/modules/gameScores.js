@@ -3,4 +3,6 @@ const gameScores = (name, score) => {
   li.textContent = `${name}: ${score}`;
   return li;
 };
+gameScores();
+
 export default gameScores;
