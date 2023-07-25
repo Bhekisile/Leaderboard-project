@@ -62,7 +62,7 @@
 ### Key Features <a name="key-features"></a>
 
 - **[Users can submit scores for display]**
-- **[Scores can be refreshed]**
+- **[It sends and receives data using the API]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
