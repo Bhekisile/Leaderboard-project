@@ -11,4 +11,6 @@ const getScores = async (gameId) => {
     return null;
   }
 };
+getScores();
+
 export default getScores;
