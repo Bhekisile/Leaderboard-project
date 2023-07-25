@@ -1,42 +1,54 @@
 import './styles.css';
+import gameScores from './modules/gameScores.js';
+import saveScore from './modules/saveScore.js';
+import getScores from './modules/getScores.js';
 
-const form = document.querySelector('form');
-const scoreList = document.getElementById('score-list');
+const apiUrl = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/';
+let gameId;
 
-const scores = JSON.parse(localStorage.getItem('scores')) || [];
+const myGame = async () => {
+  const storedGameId = localStorage.getItem('gameId');
+  if (storedGameId) {
+    gameId = storedGameId;
+  } else {
+    const response = await
+    fetch(`${apiUrl}games/`, {
+      method: 'POST',
+      headers: {
+        'Content-Type':
+        'application/json',
+      },
+      body:
+    JSON.stringify({ name: 'This is My New Game' }),
+    });
+    const data = await
+    response.json();
+    gameId = data.result;
+    localStorage.setItem('gameId', gameId);
+  }
+};
+myGame();
 
-function Score(name, score) {
-  this.name = name;
-  this.score = score;
-}
-
-const displayScores = () => {
-  scoreList.innerHTML = '';
-  scores.forEach((recentScore) => {
-    const newScore = document.createElement('li');
-    newScore.classList.add('newScore');
-    newScore.innerHTML = `<p>${recentScore.name} ${recentScore.score}`;
-    scoreList.appendChild(newScore);
+const refreshBtn = document.getElementById('refresh');
+refreshBtn.addEventListener('click', async () => {
+  const scores = await getScores(gameId);
+  const scoresList = document.getElementById('score-list');
+  scoresList.innerHTML = '';
+  scores.forEach(({ user, score }) => {
+    const li = gameScores(user, score);
+    scoresList.appendChild(li);
   });
-};
-displayScores();
+});
 
-const addScore = (name, score) => {
-  const newScore = new Score(name, score);
-  scores.push(newScore);
-  localStorage.setItem('scores', JSON.stringify(scores));
-  displayScores();
-};
-
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
+const submitBtn = document.getElementById('submit');
+submitBtn.addEventListener('click', async (event) => {
+  event.preventDefault();
   const nameInput = document.getElementById('name');
   const scoreInput = document.getElementById('score');
-  const name = nameInput.value;
-  const score = scoreInput.value;
-  if (name.trim() !== '' && score.trim() !== '') {
-    addScore(name, score);
-  }
+  const { value: name } = nameInput;
+  const { value: score } = scoreInput;
+  await saveScore(gameId, name, score);
+
   nameInput.value = '';
   scoreInput.value = '';
 });

@@ -32,6 +32,10 @@ h1 {
   flex-wrap: wrap;
 }
 
+ul li {
+  list-style: none;
+}
+
 .col2 {
   margin-right: 240px;
   width: 22.2%;
