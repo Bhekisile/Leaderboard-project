@@ -22,7 +22,7 @@
 
 # 📖 [Leaderboard] <a name="about-project"></a>
 
-**[Leaderboard]** is a project built to store and display names and scores. It allows users to add, submit and refresh the scores. 
+**[Leaderboard]** is a project built to store and display names and scores. It allows users to add, submit and refresh the scores.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -84,7 +84,7 @@ Clone this repository to your desired folder:
 
 Example commands:
 
-  git clone git@github.com:Bhekisile/Leaderboard-project.git
+git clone git@github.com:Bhekisile/Leaderboard-project.git
 
 ### Install
 
@@ -92,8 +92,7 @@ Install this project with:
 
 - Install Node Modules
 
-`   npm install
-` 
+`  npm install`
 
 ### Usage
 
@@ -101,8 +100,7 @@ To run the project, execute the following command:
 
 - Start the development server
 
-`   npm start
-`
+`  npm start`
 
 <!-- AUTHORS -->
 
@@ -119,7 +117,7 @@ To run the project, execute the following command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
--  **[Highlight the highest score]**
+- **[Highlight the highest score]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
